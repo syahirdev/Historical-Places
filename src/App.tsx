@@ -1,7 +1,8 @@
-import Home from './pages/Home';
+import Places from './pages/Places';
 
 function App() {
-  return <Home />;
+  return <Places />;
+  // return <Home />;
 }
 
 export default App;

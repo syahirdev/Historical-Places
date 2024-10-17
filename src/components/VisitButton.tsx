@@ -9,8 +9,8 @@ export default function VisitButton() {
       onClick={() => setVisited(!visited)}
       className="flex items-center gap-x-3"
     >
-      {visited ? <PiFlagBannerFoldFill /> : <PiFlagBannerFold />}
       <span>{visited ? 'Visited' : 'Not yet visited'}</span>
+      {visited ? <PiFlagBannerFoldFill /> : <PiFlagBannerFold />}
     </button>
   );
 }
