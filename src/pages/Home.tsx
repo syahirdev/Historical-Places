@@ -1,8 +1,11 @@
 import { HiOutlineChevronDoubleRight } from 'react-icons/hi2';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import VisitButton from '../components/VisitButton';
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <div>
       {/* Navbar */}
@@ -22,7 +25,10 @@ export default function Home() {
               Historical Places
             </h1>
             <p className="text-white text-xl">That you might've liked!</p>
-            <button className="bg-white w-fit transform -skew-x-[15deg] mt-3">
+            <button
+              className="bg-white w-fit transform -skew-x-[15deg] mt-3"
+              onClick={() => navigate('/places')}
+            >
               <div className="hover:animate-bounce-x px-7 py-2 flex items-center gap-x-2">
                 <span>See more</span>
                 <HiOutlineChevronDoubleRight />
