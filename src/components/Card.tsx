@@ -18,8 +18,8 @@ export default function Card({ place, openModal }: Props) {
       <div className="absolute top-5 left-5 right-5 text-white opacity-0 group-hover:opacity-100 duration-300">
         {place.description}
       </div>
-      <div className="absolute bottom-3 left-5 right-5 bg-white flex justify-between px-8 py-3 transform skew-x-[-15deg]">
-        <div className="skew-x-[15deg] flex flex-col items-start">
+      <div className="absolute bottom-3 left-5 right-5 bg-white flex flex-col sm:flex-row items-center justify-between px-8 py-3 transform skew-x-[-15deg]">
+        <div className="skew-x-[15deg] flex flex-col sm:items-start">
           <div className="font-bold">{place.name}</div>
           <div className="text-sm font-semibold">{place.location}</div>
         </div>

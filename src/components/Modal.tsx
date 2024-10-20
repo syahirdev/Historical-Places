@@ -30,8 +30,9 @@ export default function Modal({
       isOpen={isOpen}
       onRequestClose={closeModal}
       style={customStyles}
+      overlayClassName="fixed inset-0 bg-black bg-opacity-50 z-50"
     >
-      <div className="max-w-3xl">
+      <div className="w-[85vw] max-w-xl">
         <div className="flex justify-between items-center text-xl font-bold mb-5">
           <p>
             {isRandom

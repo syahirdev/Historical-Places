@@ -28,9 +28,9 @@ export default function Home() {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black opacity-50" />
-        <div className="flex justify-between absolute inset-0 max-w-5xl mx-auto py-5 pr-5">
+        <div className="flex justify-between absolute inset-0 max-w-5xl mx-auto py-5 px-5">
           <div className="flex flex-col justify-center gap-y-3 ">
-            <h1 className="text-white text-7xl max-w-1 font-bold tracking-wide">
+            <h1 className="text-white text-5xl sm:text-7xl max-w-1 font-bold tracking-wide">
               Historical Places
             </h1>
             <p className="text-white text-xl">That you might've liked!</p>
@@ -44,7 +44,7 @@ export default function Home() {
               </div>
             </button>
           </div>
-          <div className="flex flex-col gap-y-5">
+          <div className="hidden sm:flex flex-col gap-y-5">
             {highlights?.slice(0, 4)?.map((place) => (
               <button
                 key={place.id}
@@ -63,10 +63,14 @@ export default function Home() {
       </div>
 
       {/* Place Info */}
-      <div id="info" className="max-w-5xl mx-auto mt-10 pl-5 pb-5">
-        <div className="font-bold text-3xl">{selectedPlace?.name}</div>
+      <div id="info" className="max-w-5xl mx-auto mt-10 px-5 pb-5">
+        <div className="font-bold text-2xl sm:text-3xl">
+          {selectedPlace?.name}
+        </div>
         <div className="font-semibold text-xl">{selectedPlace?.location}</div>
-        <div className="max-w-96 mt-1 mb-5">{selectedPlace?.description}</div>
+        <div className="max-w-80 sm:max-w-96 mt-1 mb-5 text-sm sm:text-base">
+          {selectedPlace?.description}
+        </div>
         <VisitButton id={selectedPlace?.id} />
       </div>
     </div>

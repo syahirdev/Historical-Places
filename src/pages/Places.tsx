@@ -29,7 +29,7 @@ export default function Places() {
       <Navbar />
 
       {/* Container */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 px-5">
+      <div className="max-w-sm sm:max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 px-5">
         {places
           .filter((place) => !isVisitedPage || visited.includes(place.id))
           .map((place) => (
