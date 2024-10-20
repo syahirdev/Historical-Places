@@ -8,10 +8,7 @@ type Props = {
 
 export default function Card({ place, openModal }: Props) {
   return (
-    <button
-      className="flex-grow md:basis-[calc(50%-0.75rem)] xl:basis-[calc(33%-0.75rem)] border-2 border-black relative group"
-      onClick={openModal}
-    >
+    <button className=" relative group" onClick={openModal}>
       <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 duration-300" />
       <img
         src={`assets/${place.image}`}

@@ -31,7 +31,7 @@ export default function Modal({
       onRequestClose={closeModal}
       style={customStyles}
     >
-      <div>
+      <div className="max-w-3xl">
         <div className="flex justify-between items-center text-xl font-bold mb-5">
           <p>
             {isRandom
@@ -42,17 +42,21 @@ export default function Modal({
             <FaXmark />
           </button>
         </div>
-        <img src={`assets/${place?.image}`} alt="colosseum" />
-        <div className="flex justify-between items-center mt-5">
+        <img
+          src={`assets/${place?.image}`}
+          alt={place?.name}
+          className="w-full h-auto mb-5"
+        />
+        <div className="flex flex-col md:flex-row justify-between items-center mt-5">
           <div>
             <div className="text-2xl font-bold">{place?.name}</div>
             <div className="font-semibold">{place?.location}</div>
           </div>
-          <div>
+          <div className="mt-3 md:mt-0">
             <VisitButton id={place?.id} />
           </div>
         </div>
-        <div className="text-sm mt-3">{place?.description}</div>
+        <div className="text-sm mt-3 max-w-[90%]">{place?.description}</div>
       </div>
     </ReactModal>
   );
