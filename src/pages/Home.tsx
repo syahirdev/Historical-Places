@@ -1,10 +1,19 @@
+import { useEffect, useState } from 'react';
 import { HiOutlineChevronDoubleRight } from 'react-icons/hi2';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import VisitButton from '../components/VisitButton';
+import { useAppSelector } from '../redux/app/hooks';
+import { PlaceState } from '../redux/reducers/appSlice';
 
 export default function Home() {
   const navigate = useNavigate();
+  const { highlights } = useAppSelector((state) => state.app);
+  const [selectedPlace, setSelectedPlace] = useState<PlaceState | null>(null);
+
+  useEffect(() => {
+    if (highlights.length > 0) setSelectedPlace(highlights[0]);
+  }, [highlights]);
 
   return (
     <div>
@@ -14,7 +23,7 @@ export default function Home() {
       {/* Hero */}
       <div id="hero" className="relative w-full h-[60vh]">
         <img
-          src="assets/colosseum.png"
+          src={`assets/${selectedPlace?.image}`}
           alt="hero"
           className="w-full h-full object-cover"
         />
@@ -36,28 +45,29 @@ export default function Home() {
             </button>
           </div>
           <div className="flex flex-col gap-y-5">
-            {[...Array(4)].map(() => (
-              <div className="relative p-1.5 bg-white bg-opacity-50 inline-block hover:bg-opacity-80 duration-300">
+            {highlights?.slice(0, 4)?.map((place) => (
+              <button
+                key={place.id}
+                className="relative p-1.5 bg-white bg-opacity-50 inline-block hover:bg-opacity-80 duration-300"
+                onClick={() => setSelectedPlace(place)}
+              >
                 <img
-                  src="assets/taj-mahal.png"
-                  alt="taj-mahal"
+                  src={`assets/${place.image}`}
+                  alt={place.name}
                   className="w-[200px] h-[120px] object-cover"
                 />
-              </div>
+              </button>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Info */}
-      <div id="info" className="max-w-5xl mx-auto mt-10">
-        <div className="font-bold text-3xl">Colosseum</div>
-        <div className="font-semibold text-xl">Rome, Italy</div>
-        <div className="max-w-96 mt-1 mb-5">
-          The Colosseum is an ancient amphitheater in Rome, famous for
-          gladiatorial contests and public spectacles.
-        </div>
-        <VisitButton />
+      {/* Place Info */}
+      <div id="info" className="max-w-5xl mx-auto mt-10 pl-5 pb-5">
+        <div className="font-bold text-3xl">{selectedPlace?.name}</div>
+        <div className="font-semibold text-xl">{selectedPlace?.location}</div>
+        <div className="max-w-96 mt-1 mb-5">{selectedPlace?.description}</div>
+        <VisitButton id={selectedPlace?.id} />
       </div>
     </div>
   );

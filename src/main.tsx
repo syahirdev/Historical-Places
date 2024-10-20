@@ -1,23 +1,22 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
+import App from './App';
 import './index.css';
-import Home from './pages/Home';
-import Places from './pages/Places';
+import { store } from './redux/app/store';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: '/places',
-    element: <Places />
-  }
-]);
+const container = document.getElementById('root');
+const root = createRoot(container!);
+let persistor = persistStore(store);
 
-createRoot(document.getElementById('root')!).render(
+root.render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <App />
+      </PersistGate>
+    </Provider>
   </StrictMode>
 );

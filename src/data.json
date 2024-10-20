@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "name": "Acropolis",
+    "location": "Athens, Greece",
+    "yearConstructed": "5th century BC",
+    "description": "An ancient citadel on a rocky outcrop above Athens, containing the remains of historically significant buildings, such as the Parthenon.",
+    "image": "acropolis.png",
+    "keyFacts": [
+      "Symbol of ancient Greek civilization",
+      "UNESCO World Heritage Site",
+      "Known for the Parthenon temple"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Alhambra",
+    "location": "Granada, Spain",
+    "yearConstructed": "13th century",
+    "description": "A beautiful palace and fortress complex, known for its Moorish architecture and intricate tilework.",
+    "image": "alhambra.png",
+    "keyFacts": [
+      "Example of Islamic architecture in Europe",
+      "Originally built by the Nasrid dynasty",
+      "Surrounded by lush gardens and fountains"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Angkor Wat",
+    "location": "Siem Reap, Cambodia",
+    "yearConstructed": "12th century",
+    "description": "The largest religious monument in the world, originally built as a Hindu temple, later becoming a Buddhist temple.",
+    "image": "angkor-wat.png",
+    "keyFacts": [
+      "Symbol of Cambodia",
+      "Famous for its intricate bas-reliefs",
+      "UNESCO World Heritage Site"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Colosseum",
+    "location": "Rome, Italy",
+    "yearConstructed": "AD 70-80",
+    "description": "An ancient amphitheater in Rome, known for hosting gladiatorial games and other public spectacles.",
+    "image": "colosseum.png",
+    "keyFacts": [
+      "Largest amphitheater ever built",
+      "Icon of ancient Roman architecture",
+      "Could hold up to 80,000 spectators"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Eiffel Tower",
+    "location": "Paris, France",
+    "yearConstructed": "1889",
+    "description": "A wrought-iron lattice tower, an iconic symbol of Paris and one of the most visited landmarks in the world.",
+    "image": "eiffel-tower.png",
+    "keyFacts": [
+      "Designed by Gustave Eiffel",
+      "Built for the 1889 World's Fair",
+      "Attracts nearly 7 million visitors annually"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Great Wall of China",
+    "location": "Northern China",
+    "yearConstructed": "7th century BC - 16th century",
+    "description": "A vast network of fortifications built to protect China from invasions, stretching over 13,000 miles.",
+    "image": "great-wall-of-china.png",
+    "keyFacts": [
+      "One of the New Seven Wonders of the World",
+      "Longest man-made structure on Earth",
+      "Symbol of China's strength and resilience"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Machu Picchu",
+    "location": "Cusco Region, Peru",
+    "yearConstructed": "15th century",
+    "description": "An ancient Incan city located high in the Andes, known for its sophisticated stone construction and stunning mountain views.",
+    "image": "machu-picchu.png",
+    "keyFacts": [
+      "Lost city of the Incas",
+      "UNESCO World Heritage Site",
+      "One of the New Seven Wonders of the World"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Petra",
+    "location": "Ma'an Governorate, Jordan",
+    "yearConstructed": "5th century BC",
+    "description": "A historical city carved into red sandstone cliffs by the Nabateans, known for its impressive rock-cut architecture.",
+    "image": "petra.png",
+    "keyFacts": [
+      "Known as the 'Rose City'",
+      "Famous for the Treasury and Monastery",
+      "UNESCO World Heritage Site"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Pyramid of Giza",
+    "location": "Giza, Egypt",
+    "yearConstructed": "2580–2560 BC",
+    "description": "The Great Pyramid of Giza, the largest of the pyramids, was built as a tomb for Pharaoh Khufu and is the only surviving ancient wonder.",
+    "image": "pyramid-of-giza.png",
+    "keyFacts": [
+      "Oldest of the Seven Wonders of the Ancient World",
+      "Height of 146 meters (481 feet)",
+      "Estimated 2.3 million stone blocks used"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Roman Forum",
+    "location": "Rome, Italy",
+    "yearConstructed": "7th century BC",
+    "description": "The central area of ancient Rome, housing important government buildings, temples, and markets.",
+    "image": "roman-forum.png",
+    "keyFacts": [
+      "Center of political and social life in ancient Rome",
+      "Contains ruins of ancient temples and basilicas",
+      "Located near the Colosseum"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Stonehenge",
+    "location": "Wiltshire, England",
+    "yearConstructed": "3000–2000 BC",
+    "description": "A prehistoric monument consisting of a circle of standing stones, its purpose remains a mystery, with theories of astronomical or religious significance.",
+    "image": "stonehenge.png",
+    "keyFacts": [
+      "One of the most famous prehistoric sites",
+      "Stones weigh up to 25 tons each",
+      "Aligned with the sunrise of the summer solstice"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Taj Mahal",
+    "location": "Agra, India",
+    "yearConstructed": "1632–1653",
+    "description": "A white marble mausoleum built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal, celebrated for its stunning beauty.",
+    "image": "taj-mahal.png",
+    "keyFacts": [
+      "UNESCO World Heritage Site",
+      "Symbol of love and beauty",
+      "One of the New Seven Wonders of the World"
+    ]
+  }
+]

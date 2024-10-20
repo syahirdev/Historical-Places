@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import { FaXmark } from 'react-icons/fa6';
 import ReactModal from 'react-modal';
+import { PlaceState } from '../redux/reducers/appSlice';
 import VisitButton from './VisitButton';
 
 const customStyles = {
@@ -13,35 +13,46 @@ const customStyles = {
   }
 };
 
-export default function Modal() {
-  const [isOpen, setIsOpen] = useState(false);
+type Props = {
+  isRandom?: boolean;
+  isOpen: boolean;
+  closeModal: () => void;
+  place: PlaceState | null;
+};
+export default function Modal({
+  isRandom = false,
+  isOpen,
+  closeModal,
+  place
+}: Props) {
   return (
     <ReactModal
       isOpen={isOpen}
-      onRequestClose={() => setIsOpen(false)}
+      onRequestClose={closeModal}
       style={customStyles}
     >
       <div>
         <div className="flex justify-between items-center text-xl font-bold mb-5">
-          <p>Random places you might've liked!</p>
-          <button>
+          <p>
+            {isRandom
+              ? "Random places you might've liked!"
+              : 'Historical Place'}
+          </p>
+          <button onClick={closeModal}>
             <FaXmark />
           </button>
         </div>
-        <img src="assets/colosseum.png" alt="colosseum" />
+        <img src={`assets/${place?.image}`} alt="colosseum" />
         <div className="flex justify-between items-center mt-5">
           <div>
-            <div className="text-2xl font-bold">Colosseum</div>
-            <div className="font-semibold">Rome, Italy</div>
+            <div className="text-2xl font-bold">{place?.name}</div>
+            <div className="font-semibold">{place?.location}</div>
           </div>
           <div>
-            <VisitButton />
+            <VisitButton id={place?.id} />
           </div>
         </div>
-        <div className="text-sm mt-3">
-          The Colosseum is an ancient amphitheater in Rome, famous for
-          gladiatorial contests and public spectacles.
-        </div>
+        <div className="text-sm mt-3">{place?.description}</div>
       </div>
     </ReactModal>
   );
